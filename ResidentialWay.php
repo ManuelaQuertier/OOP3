@@ -12,8 +12,9 @@ final class ResidentialWay extends HighWay
     }
 
     public function addVehicle(Vehicle $vehicle):void {
-        if (($vehicle instanceof Bicycle)||($vehicle instanceof Skateboard)) {
-            array_push($this->currentVehicles, $vehicle);
+        if ($vehicle instanceof Vehicle) 
+        {
+            $this->currentVehicles[]= $vehicle;
         }
     }
 }

@@ -13,6 +13,9 @@ final class MotorWay extends HighWay
 
     public function addVehicle(Vehicle $vehicle): void
     {
-        array_push($this->currentVehicles, $vehicle);
+        if ($vehicle instanceof Car) 
+        {
+            $this->currentVehicles[] = $vehicle;
+        }
     }
 }
